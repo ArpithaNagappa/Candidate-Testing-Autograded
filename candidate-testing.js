@@ -22,7 +22,7 @@ let candidateAnswers=[];
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 //const input = require('readline-sync');
-let candidateName = input.question("What is your name?");
+candidateName = input.question("What is your name?");
 console.log("CandidateName:" +candidateName);
 }
 
@@ -30,7 +30,7 @@ function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 //let candidateAnswer = input.question("Who was the first American woman in space? ");
 //candidateAnswer = console.log(candidateAnswer);
-for(i=0;i<questions.length-1;i++){
+for(i=0;i<questions.length;i++){
   candidateAnswers[i] = input.question(questions[i]);
 }
 }
@@ -54,7 +54,7 @@ let cnt=0;
     if(candidateAnswers[i].toLowerCase() ===correctAnswers[i].toLowerCase())
     {
        cnt=cnt+1;
-       console.log(`cnt: ${cnt}`);
+       //console.log(`cnt: ${cnt}`);
     }
   }
   grade=(cnt/questions.length)*100;
